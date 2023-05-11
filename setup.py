@@ -5,8 +5,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="tether_utils",
-    install_requires=["boto3", "drf-jwt", "djangorestframework", "drf-yasg", "iso3166"],
-    version="1.2.1",
+    install_requires=["boto3", "drf-jwt", "djangorestframework", "drf-yasg"],
+    version="1.1.1",
     author="Claudio Sanchez",
     author_email="claudiosanchez@consiliumbots.com",
     description=("Thin wrapper for Tether Utils / AWS SNS and Others"),
@@ -26,4 +26,5 @@ setuptools.setup(
 # 1.0.1 -> Initial
 # 1.1.0 -> fix for str message
 # 1.1.1 -> fix on json import
-# 1.2.1 -> added iso3166 country utils
+
+

@@ -9,7 +9,6 @@ setuptools="*"
 drf-jwt = "*"
 djangorestframework = "*"
 drf-yasg = "*"
-iso3166 = "*"
 
 [dev-packages]
 black = "*"

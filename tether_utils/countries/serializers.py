@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from tether_utils.countries.utils import get_country_code
 
+__all__ = ["CountryCharFieldSerializer"]
+
 
 class CountryCharFieldSerializer(serializers.CharField):
     def to_internal_value(self, data: str) -> str:

@@ -1,6 +1,12 @@
 from typing import Union
-from iso3166 import countries
+from iso3166 import countries, Country
 from tether_utils.countries.exceptions import CountryValidationException
+
+__all__ = ["get_country_data", "get_country_code", "validate_country_string"]
+
+
+def get_country_data(country: Union[str, int]) -> Country:
+    return countries.get(country, None)
 
 
 def get_country_code(country: Union[str, int]) -> str:
@@ -20,7 +26,7 @@ def get_country_code(country: Union[str, int]) -> str:
     Returns:
         `str`: The country code as defined in ISO 3166-1 alpha-3
     """
-    country = countries.get(country, None)
+    country = get_country_data(country)
     if country is None:
         return None
     return country.alpha3

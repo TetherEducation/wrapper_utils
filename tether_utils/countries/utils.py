@@ -38,7 +38,6 @@ def validate_country_string(country: str) -> str:
 
     Raises:
         `CountryValidationException`: If the country code is invalid
-
     """
     country_code = get_country_code(country)
     if country_code is None:

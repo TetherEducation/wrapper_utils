@@ -63,10 +63,6 @@ exclude = '''
 )/
 '''
 
-[packages]
-aws_secretmanager = { files = ["aws_secretmanager/*.py"] }
-aws_sns = { files = ["aws_sns/*.py"] }
-tether_utils = { files = ["tether_utils/*.py"] }
 
 # Versions
 # 1.3.3  -> Migrating to pyproject.toml

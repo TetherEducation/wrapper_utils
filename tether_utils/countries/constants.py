@@ -1,7 +1,7 @@
 import pycountry
 from typing import Final, Tuple, Iterator
 
-__all__ = ["COUNTRIES_TUPLES", "COUNTRIES_ISO2_TUPLES", "COUNTRIES_ISO3_TUPLES", "pycountry"]
+__all__ = ["COUNTRIES_TUPLES", "COUNTRIES_ISO2_TUPLES", "COUNTRIES_ISO3_TUPLES"]
 
 COUNTRIES_ISO3_TUPLES: Final[Iterator[Tuple[str, str]]] = (
     (c.alpha_3, c.name) for c in pycountry.countries

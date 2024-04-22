@@ -2,10 +2,11 @@ from .constants import COUNTRIES_TUPLES, COUNTRIES_ISO2_TUPLES, COUNTRIES_ISO3_T
 from .utils import get_country_data, get_country_code, validate_country_string
 from .exceptions import CountryValidationException
 from .serializers import CountryCharFieldSerializer
-import pycountry
-
+from .utils import (
+    all_countries, iso2_lookup, countries_iso, CountryData, FlagData, ISOData
+)
 __all__ = [
-    "get_country_data",
+    "get_pycountry_data",
     "get_country_code",
     "validate_country_string",
     "COUNTRIES_TUPLES",
@@ -13,5 +14,10 @@ __all__ = [
     "COUNTRIES_ISO3_TUPLES",
     "CountryValidationException",
     "CountryCharFieldSerializer",
-    "pycountry",
+    "all_countries",
+    "iso2_lookup",
+    "countries_iso",
+    "CountryData",
+    "FlagData",
+    "ISOData",
 ]

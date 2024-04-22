@@ -3,14 +3,16 @@ from pycountry import countries
 from pycountry.db import Country
 from tether_utils.countries.exceptions import CountryValidationException
 
-__all__ = ["get_country_data", "get_country_code", "validate_country_string"]
+__all__ = ["get_pycountry_data", "get_country_code", "validate_country_string"]
 
 
-def get_country_data(country: Union[str, int]) -> Country:
+def get_pycountry_data(country: Union[str, int]) -> Country:
     try:
         return countries.lookup(country)
     except LookupError:
         return None
+    
+
 
 
 def get_country_code(country: Union[str, int], iso_format: Literal['alpha_2', 'alpha_3'] = 'alpha_3') -> str:
@@ -31,7 +33,7 @@ def get_country_code(country: Union[str, int], iso_format: Literal['alpha_2', 'a
     Returns:
         `str`: The country code as defined in ISO 3166-1 alpha-2 or alpha-3 (depending on the `iso_format` parameter)
     """
-    country = get_country_data(country)
+    country = get_pycountry_data(country)
     if country is None:
         return None
     return country[iso_format]

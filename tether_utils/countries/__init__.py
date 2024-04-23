@@ -1,5 +1,5 @@
 from .constants import COUNTRIES_TUPLES, COUNTRIES_ISO2_TUPLES, COUNTRIES_ISO3_TUPLES
-from .utils import get_country_data, get_country_code, validate_country_string
+from .utils import get_pycountry_data, get_country_code, validate_country_string
 from .exceptions import CountryValidationException
 from .serializers import CountryCharFieldSerializer
 from .utils import (

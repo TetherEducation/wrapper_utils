@@ -11,8 +11,7 @@ def get_pycountry_data(country: Union[str, int]) -> Country:
         return countries.lookup(country)
     except LookupError:
         return None
-    
-
+        
 
 
 def get_country_code(country: Union[str, int], iso_format: Literal['alpha_2', 'alpha_3'] = 'alpha_3') -> str:

@@ -1,5 +1,5 @@
 from typing import Final, Tuple, Iterator
-from utils.lookup import all_countries
+from tether_utils.countries.utils.lookup import all_countries
 
 __all__ = ["COUNTRIES_TUPLES", "COUNTRIES_ISO2_TUPLES", "COUNTRIES_ISO3_TUPLES"]
 

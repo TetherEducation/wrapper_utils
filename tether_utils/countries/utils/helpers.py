@@ -35,7 +35,7 @@ def get_country_code(country: Union[str, int], iso_format: Literal['alpha_2', 'a
     country = get_pycountry_data(country)
     if country is None:
         return None
-    return country[iso_format]
+    return getattr(country, iso_format)
 
 
 def validate_country_string(country: str) -> str:
